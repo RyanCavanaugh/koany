@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"jsx": "react",
+		"noImplicitAny": true
+	},
+	"files": [
+		"../DefinitelyTyped/react/react-global.d.ts",
+		"koany.tsx"
+	]
+}

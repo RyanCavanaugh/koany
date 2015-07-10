@@ -1,0 +1,168 @@
+body {
+	background: #333;
+	color: white;
+}
+
+.garden, #footer, .palette {
+	font-family: 'Courier New';
+	font-size: 220%;
+}
+
+.garden, .palette {
+	width: 3em;
+	height: 3em;
+	margin: 0.4em;
+	display: inline-block;
+	border-radius: 4px;
+
+	position: relative;
+}
+
+.garden.pass {
+	border: solid green 7px;
+}
+.garden.fail {
+	border: solid red 7px;
+}
+
+.garden .cell {
+	position: absolute;
+	background: #777;
+	border: solid #AAA 1px;
+}
+
+.garden .cell, #footer .cell, .palette .cell {
+	background-size: 60% 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	width: 33.333%;
+	height: 33.333%;
+
+	text-align: center;
+}
+
+.cell.index_0 {	left: 0.0000%; top: 0.0000%; }
+.cell.index_1 {	left: 33.333%; top: 0.0000%; }
+.cell.index_2 {	left: 66.666%; top: 0.0000%; }
+.cell.index_3 {	left: 0.0000%; top: 33.333%; }
+.cell.index_4 {	left: 33.333%; top: 33.333%; }
+.cell.index_5 {	left: 66.666%; top: 33.333%; }
+.cell.index_6 {	left: 0.0000%; top: 66.666%; }
+.cell.index_7 {	left: 33.333%; top: 66.666%; }
+.cell.index_8 {	left: 66.666%; top: 66.666%; }
+
+.cell.Square.Red     { background-image: url(images/square.red.png);}
+.cell.Square.Black   { background-image: url(images/square.black.png);}
+.cell.Square.White   { background-image: url(images/square.white.png);}
+.cell.Triangle.Red   { background-image: url(images/triangle.red.png);}
+.cell.Triangle.Black { background-image: url(images/triangle.black.png);}
+.cell.Triangle.White { background-image: url(images/triangle.white.png);}
+.cell.Circle.Red     { background-image: url(images/circle.red.png);}
+.cell.Circle.Black   { background-image: url(images/circle.black.png);}
+.cell.Circle.White   { background-image: url(images/circle.white.png);}
+
+#footer {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+}
+
+#footer .cell {
+	position: relative;
+	display: inline-block;
+	position: relative;
+	width: 1em;
+	height: 1em;
+}
+
+.cell.movable {
+	user-select: none;
+}
+.cell.dragged {
+	cursor: crosshair;
+	background: transparent;
+}
+
+div.editor {
+	position: relative;
+	border: solid white 1px;
+	display: inline-block;
+}
+
+div.editor div.palette {
+	border: solid red 1px;
+}
+
+div.editor div.palette span.cell {
+	position: absolute;
+}
+
+div.button {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	cursor: default;
+
+	background: #AAA;
+	color: black;
+	border: solid black 2px;
+	box-shadow: #444 2px 2px 1px 1px;
+}
+
+div.button:hover {
+	background: #777;
+	color: #222;
+}
+
+div.button:active {
+	transform: translate(2px, 2px);
+	box-shadow: none;
+}
+
+
+div.save {
+	font-size: 130%;
+	position: relative;
+	left: 40%;
+	width: 20%;
+	bottom: 4px;
+}
+
+div.gardenDisplay {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 0.8em;
+}
+
+div.gardenDisplay div.garden {
+	margin-bottom: 0px;
+}
+
+div.left {
+	font-size: 120%;
+	left: 10%;
+	width: 2em;
+}
+div.passfail {
+	font-size: 130%;
+	left: 40%;
+	right: 40%;
+	text-align: center;
+}
+div.right {
+	font-size: 120%;
+	right: 10%;
+	width: 2em;
+}
+
+span.infoRow {
+	display: block;
+	position: relative;
+	bottom: 0px;
+	height: 1.3em;
+}
+span.infoRow div {
+	position: absolute;
+}
